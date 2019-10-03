@@ -1,4 +1,4 @@
-filename = 'pi_digits.txt'
+filename = 'pi_million_digits.txt'
 
 with open(filename) as file_object:
     lines = file_object.readlines()
@@ -7,5 +7,11 @@ pi_string = ''
 for line in lines:
     pi_string += line.strip()
 
-print(pi_string)
-print(len(pi_string))
+# print(f"{pi_string[:52]}...")
+# i = 1 + 2 * 3 - 4 / 5
+
+birthday = input("Enter your birthday, in the form mmddyy: ")
+if birthday in pi_string:     # some comments
+    print("Your birthday appears in the first million digits of pi!")
+else:
+    print("Your birthday does not appear in the first million digits of pi.")
